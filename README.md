@@ -27,11 +27,11 @@ We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB.
 
 1. Clone the repository:
    ```console
-   git clone https://github.com/yourusername/ai-blue.git
+   git clone https://github.com/yourusername/aiblue_ultra.git
    ```
-2. Navigate to the AI-blue directory:
+2. Navigate to the AI blue ultra directory:
    ```console
-   cd ai-blue
+   cd aiblue_ultra
    ```
 3. Install the required packages:
    ```console
@@ -48,7 +48,11 @@ nohup python session_manager.py &
 ```
 
 ```console
-nohup python ai_blue_prototype.py &
+nohup python aiblue_ultra.py &
+```
+
+```console
+nohup python ai_app.py &
 ```
 
 Alternatively, you can use `screen` for session management, and start the user_management module.
@@ -62,7 +66,13 @@ And press `Ctrl-a, d` to exit that session. And start AI Blue module.
 
 ```console
 screen
-python ai_blue_prototype.py
+python aiblue_ultra.py
+```
+And press `Ctrl-a, d` to exit that session once again.
+
+```console
+screen
+python ai_app.py
 ```
 And press `Ctrl-a, d` to exit that session once again.
 
@@ -71,8 +81,8 @@ You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-I
 AI Blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
 - Local: `http://192.0.0.1:7860/`
-- Public IP: `http://34.121.86.8:7860/`
-- Short URL: [bit.ly/ai-blue](http://bit.ly/ai-blue)
+- Public IP: `http://34.29.172.222:7861/`
+- Short URL: [bit.ly/AIBlueUltra](https://bit.ly/AIBlueUltra)
 
 ### Data Collection and Privacy
 
