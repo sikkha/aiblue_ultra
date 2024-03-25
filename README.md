@@ -1,4 +1,4 @@
-# aiblue_ultra
+# AIBlue Ultra
 
 
 ## Project Overview
@@ -11,17 +11,13 @@ AI Blue is a cutting-edge, multi-headed AI integration platform designed to anal
 
 ### Prerequisites
 
-Ensure you have Python installed on your system. AI Blue is built to be simple and straightforward, requiring only three main files to function:
+Ensure you have Python installed on your system. AI Blue is built to be simple and straightforward, requiring only four main files to function (with related html files in templates directory):
 
 1. `requirements.txt` - Lists all the necessary Python packages.
 2. `ai_blue_prototype.py` - The main Python script for the AI Blue model.
 3. `session_manager.py` - The user session management engine.
+4. `ai_app.py` - Web Interface for both AIBlue Ultra and configuration
 
-### Option
-
-We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB. However, it hasn't been used in AI Blue yet. It will be explored further to generate more documents with the RAG Agent later.
-
-4. `showcase_leaderboard.py` - Showcase for LLamaIndex, RAG, ChromaDB and Trulen evaluation leaderboard.
 
 ### Installation
 
@@ -80,7 +76,7 @@ You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-I
 
 AI Blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
-- Local: `http://192.0.0.1:7860/`
+- Local: `http://192.0.0.1:7861/`
 - Public IP: `http://34.29.172.222:7861/`
 - Short URL: [bit.ly/AIBlueUltra](https://bit.ly/AIBlueUltra)
 
