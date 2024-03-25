@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIBlue Configuration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto py-8">
+        <h1 class="text-4xl font-bold mb-8 text-center text-white">AIBlue Configuration</h1>
+        <form method="POST" class="bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-indigo-600">Configuration</h2>
+                <div class="mb-6">
+                    <label for="persona" class="block mb-2 font-semibold text-indigo-600">Persona:</label>
+                    <input type="text" id="persona" name="persona" value="{{ config['Configuration']['persona'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div class="mb-6">
+                    <label for="name" class="block mb-2 font-semibold text-indigo-600">Name:</label>
+                    <input type="text" id="name" name="name" value="{{ config['Configuration']['name'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div class="mb-6">
+                    <label for="creator" class="block mb-2 font-semibold text-indigo-600">Creator:</label>
+                    <input type="text" id="creator" name="creator" value="{{ config['Configuration']['creator'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div class="mb-6">
+                    <label for="style" class="block mb-2 font-semibold text-indigo-600">Style:</label>
+                    <input type="text" id="style" name="style" value="{{ config['Configuration']['style'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div>
+                    <label for="top_priority" class="block mb-2 font-semibold text-indigo-600">Top Priority:</label>
+                    <textarea id="top_priority" name="top_priority" rows="4" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">{{ config['Configuration']['top_priority'] }}</textarea>
+                </div>
+            </div>
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-indigo-600">History</h2>
+                <div class="mb-6">
+                    <label for="max_length" class="block mb-2 font-semibold text-indigo-600">Max Length:</label>
+                    <input type="number" id="max_length" name="max_length" value="{{ config['History']['max_length'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div class="mb-6">
+                    <label for="store" class="block mb-2 font-semibold text-indigo-600">Store:</label>
+                    <input type="text" id="store" name="store" value="{{ config['History']['store'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div>
+                    <label for="recall" class="block mb-2 font-semibold text-indigo-600">Recall:</label>
+                    <input type="text" id="recall" name="recall" value="{{ config['History']['recall'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+            </div>
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-indigo-600">Instructions</h2>
+                <div>
+                    <label for="instructions" class="block mb-2 font-semibold text-indigo-600">Instructions:</label>
+                    <textarea id="instructions" name="instructions" rows="6" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">{{ config['Instructions']['instructions'] }}</textarea>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-6 text-indigo-600">The Multi-headed AI Configuration</h2>
+                <div class="mb-6">
+                    <label for="main_ai" class="block mb-2 font-semibold text-indigo-600">Main AI:</label>
+                    <input type="text" id="main_ai" name="main_ai" value="{{ config['AI_Configuration']['main_ai'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div class="mb-6">
+                    <label for="subunit1" class="block mb-2 font-semibold text-indigo-600">Subunit 1:</label>
+                    <input type="text" id="subunit1" name="subunit1" value="{{ config['AI_Configuration']['subunit1'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+                <div>
+                    <label for="subunit2" class="block mb-2 font-semibold text-indigo-600">Subunit 2:</label>
+                    <input type="text" id="subunit2" name="subunit2" value="{{ config['AI_Configuration']['subunit2'] }}" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:shadow-outline">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
