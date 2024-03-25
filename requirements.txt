@@ -1,0 +1,8 @@
+gradio==4.11.0
+metaphor_python==0.1.17
+openai==1.6.0
+Requests==2.31.0
+Flask==3.0.0
+trulens_eval==0.20.0 
+chromadb==0.3.29
+llama-index==0.9.12
